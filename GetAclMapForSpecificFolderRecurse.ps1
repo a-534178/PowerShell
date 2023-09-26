@@ -7,8 +7,8 @@ CSV файл.
 # Указываем путь к папке с которой будем работать
 $path = ""
 
-# Получаем список всех папок внутри $path рекурсивно
-$folders = Get-ChildItem -Path $path -Recurse -Attributes Directory -Name
+# Получаем список всех папок внутри $path рекурсивно, изменяя параметр Depth можно контроллировать глубину поиска
+$folders = Get-ChildItem -Path $path -Depth 3 -Recurse -Attributes Directory -Name
 
 # Массив с результатами
 $summary = @()
